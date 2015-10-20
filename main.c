@@ -5,8 +5,12 @@
 
 int main(void)
 {
+    int c = 0;
+
     //Exibe o menu
     showMenu();
+
+    getchar();
 
     return 0;
 }
