@@ -5,8 +5,9 @@
 
 int main(void)
 {
-    printf("Hello World!\n");
+    //Exibe o menu
     showMenu();
+
     return 0;
 }
 
