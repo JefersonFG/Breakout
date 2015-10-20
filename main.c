@@ -1,11 +1,12 @@
 //Arquivo principal de código do projeto Breakout
 
 #include <stdio.h>
+#include <Windows.h>
 #include <display.h>
 
 int main(void)
 {
-    int c = 0;
+    system("mode 80, 40");
 
     //Exibe o menu
     showMenu();
