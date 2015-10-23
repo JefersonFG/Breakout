@@ -13,11 +13,18 @@ void showMenu()
 //Função que exibe a tela de fundo do menu
 void showMenuBackground()
 {
-    //Linha 1
+    //Variáveis que serão utilizadas
     int i = 0;
-    int c1 = 218;
-    int c2 = 196;
-    int c3 = 191;
+    int c1 = 0;
+    int c2 = 0;
+    int c3 = 0;
+    int c4 = 0;
+    int c5 = 0;
+
+    //Linha 1
+    c1 = 218;
+    c2 = 196;
+    c3 = 191;
 
     printf("%c", c1);
     for (i = 1; i < 79; i++) { printf("%c", c2); }
