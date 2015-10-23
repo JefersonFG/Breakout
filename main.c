@@ -6,7 +6,7 @@
 
 int main(void)
 {
-    system("mode 80, 40");
+    system("mode 80, 41");
 
     //Exibe o menu
     showMenu();
