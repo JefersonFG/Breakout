@@ -7,6 +7,7 @@ void showMenuBackground();
 //Função que exibe o menu principal
 void showMenu()
 {
+    //Inicializa o menu com o plano de fundo
     showMenuBackground();
 }
 
