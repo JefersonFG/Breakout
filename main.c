@@ -1,6 +1,5 @@
 //Arquivo principal de código do projeto Breakout
 
-#include <stdio.h>
 #include <Windows.h>
 #include <display.h>
 

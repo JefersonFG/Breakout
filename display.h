@@ -1,6 +1,8 @@
 //Arquivo com as funções que exibem informações na tela, como o fundo do jogo e dos menus
 
 #include <stdio.h>
+#include <conio.h>
+#include "conio21/conio2.h"
 
 void showMenuBackground();
 
@@ -480,4 +482,8 @@ void showMenuBackground()
     printf("%c", cInfEsq);
     for (i = 1; i < 79; i++) { printf("%c", mHor); }
     printf("%c", cInfDir);
+}
+
+void showGameScreen() {
+    //
 }
