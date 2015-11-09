@@ -4,17 +4,26 @@
 #include <conio.h>
 #include "conio21/conio2.h"
 
-void showMenuBackground();
-
 //Função que exibe o menu principal
-void showMenu()
+void showMenu();
+
+//Função que exibe a tela principal do jogo
+void showGameScreen();
+
+//Função que exibe a tela de recordes do jogo
+void showRecordsScreen();
+
+//Função que apaga o cursor da tela
+void hidecursor()
 {
-    //Inicializa o menu com o plano de fundo
-    showMenuBackground();
+   HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+   CONSOLE_CURSOR_INFO info;
+   info.dwSize = 100;
+   info.bVisible = FALSE;
+   SetConsoleCursorInfo(consoleHandle, &info);
 }
 
-//Função que exibe a tela de fundo do menu
-void showMenuBackground()
+void showMenu()
 {
     //Variáveis que serão utilizadas
     int i = 0;          //contador
@@ -26,6 +35,9 @@ void showMenuBackground()
     int mHor = 196;     //'─'
     int espaco = 255;   //' '
     int letraO = 111;   //'o'
+
+    //Inicia limpando a tela da aplicação
+    clrscr();
 
     //Linha 1
     printf("%c", cSupEsq);
@@ -484,6 +496,30 @@ void showMenuBackground()
     printf("%c", cInfDir);
 }
 
-void showGameScreen() {
-    //
+void showGameScreen()
+{
+    //TODO - Implementar tela do jogo
+
+    //Inicia limpando a tela da aplicação
+    clrscr();
+
+    //Temporário - Exibe uma mensagem informando o nome da tela
+    printf("Tela de jogo");
+
+    //Aguarda um caracter para sair da tela
+    getch();
+}
+
+void showRecordsScreen()
+{
+    //TODO - Implementar tela de recordes
+
+    //Inicia limpando a tela da aplicação
+    clrscr();
+
+    //Temporário - Exibe uma mensagem informando o nome da tela
+    printf("Tela de recordes");
+
+    //Aguarda um caracter para sair da tela
+    getch();
 }

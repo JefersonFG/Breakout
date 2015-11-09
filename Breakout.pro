@@ -11,4 +11,5 @@ qtcAddDeployment()
 
 HEADERS += \
     display.h \
-    conio21/conio2.h
+    conio21/conio2.h \
+    navigation.h
