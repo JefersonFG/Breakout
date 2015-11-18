@@ -16,7 +16,7 @@ int main(void)
     system("mode 80, 41");
 
     //Esconde o cursor da tela
-    hidecursor();
+    hideCursor();
 
     //Permite ao usuário navegar no menu e permanece no loop enquanto o usuário não escolher sair do jogo
     do {

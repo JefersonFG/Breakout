@@ -14,7 +14,7 @@ void showGameScreen();
 void showRecordsScreen();
 
 //Função que apaga o cursor da tela
-void hidecursor()
+void hideCursor()
 {
    HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
    CONSOLE_CURSOR_INFO info;

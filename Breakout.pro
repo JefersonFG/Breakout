@@ -12,4 +12,11 @@ qtcAddDeployment()
 HEADERS += \
     display.h \
     conio21/conio2.h \
-    navigation.h
+    navigation.h \
+    persistence.h \
+    records.h
+
+DISTFILES += \
+    records.txt \
+    game_screen.txt \
+    records_screen.txt

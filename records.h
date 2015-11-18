@@ -6,16 +6,21 @@ typedef struct recorde
 {
     char nome[15+1]; //Nome do usuário com no máximo 15 carcteres. '+1' destinado ao '\0'
     int pontos; // Pontos feitos no jogo.
-}
+} recordes;
 
+void printRecords();
 
-void le_recorde(struct recorde comparar)
+void readRecords(struct recorde comparar)
 {
 
     if(comparar.pontos > jogador.pontos)
     {
-        jogador.pontos = comparar.pontos
+        jogador.pontos = comparar.pontos;
     }
 
 }
-void imprime_recordes ()
+
+void printRecords()
+{
+    //
+}
