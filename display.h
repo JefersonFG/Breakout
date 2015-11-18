@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <conio.h>
 #include "conio21/conio2.h"
+#include "persistence.h"
 
 //Função que exibe o menu principal
 void showMenu();
@@ -504,7 +505,13 @@ void showGameScreen()
     clrscr();
 
     //Temporário - Exibe uma mensagem informando o nome da tela
-    printf("Tela de jogo");
+    //printf("Tela de jogo");
+
+    char tela[80][40];
+
+    openGameScreenFile(tela);
+
+    printf("%s", tela[0]);
 
     //Aguarda um caracter para sair da tela
     getch();
