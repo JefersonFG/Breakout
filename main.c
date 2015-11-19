@@ -2,7 +2,9 @@
 
 #include <Windows.h>
 #include <stdlib.h>
+#include <locale.h>
 
+#include "constants.h"
 #include "display.h"
 #include "navigation.h"
 
@@ -10,6 +12,9 @@ int main(void)
 {
     //Declaração de variáveis
     int opcaoMenu = 0;
+
+    //Configura o locale do programa, para permitir caracteres especiais
+    //setlocale(LC_ALL, "");
 
     //Seta o tamanho de tela para 40x80
     //A linha extra é temporária enquanto o cursor permanece na última linha

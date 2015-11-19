@@ -1,8 +1,9 @@
 //Arquivo com as funções que exibem informações na tela, como o fundo do jogo e dos menus
 
 #include <stdio.h>
-#include <conio.h>
 #include "conio21/conio2.h"
+
+#include "constants.h"
 #include "persistence.h"
 
 //Função que exibe o menu principal
@@ -499,19 +500,20 @@ void showMenu()
 
 void showGameScreen()
 {
-    //TODO - Implementar tela do jogo
+    //Declaração de variáveis
+    unsigned char gameScreen[80][40];
+    int i = 0, j = 0;
 
     //Inicia limpando a tela da aplicação
     clrscr();
 
-    //Temporário - Exibe uma mensagem informando o nome da tela
-    //printf("Tela de jogo");
+    //Lê o arquivo que contém a tela de fundo do jogo
+    readGameScreenFile(gameScreen);
 
-    char tela[80][40];
-
-    openGameScreenFile(tela);
-
-    printf("%s", tela[0]);
+    //Imprime a tela de fundo do jogo
+    for (i = 0; i < HEIGHT; i++) {
+        printf("%s", gameScreen[i]);
+    }
 
     //Aguarda um caracter para sair da tela
     getch();

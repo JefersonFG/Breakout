@@ -14,7 +14,8 @@ HEADERS += \
     conio21/conio2.h \
     navigation.h \
     persistence.h \
-    records.h
+    records.h \
+    constants.h
 
 DISTFILES += \
     records.txt \
