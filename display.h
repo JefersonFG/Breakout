@@ -6,6 +6,9 @@
 #include "constants.h"
 #include "persistence.h"
 
+//Função que apaga o cursor da tela
+void hideCursor();
+
 //Função que exibe o menu principal
 void showMenu();
 
@@ -15,7 +18,6 @@ void showGameScreen();
 //Função que exibe a tela de recordes do jogo
 void showRecordsScreen();
 
-//Função que apaga o cursor da tela
 void hideCursor()
 {
    HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -501,7 +503,7 @@ void showMenu()
 void showGameScreen()
 {
     //Declaração de variáveis
-    unsigned char gameScreen[80][40];
+    char gameScreen[80][40];
     int i = 0, j = 0;
 
     //Inicia limpando a tela da aplicação

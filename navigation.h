@@ -4,13 +4,15 @@
 #include <conio.h>
 #include "conio21/conio2.h"
 
+//Função que verifica e retorna a opção do usuário no menu principal
+int navigateMenu();
+
 //Tipo enumerado com as opções do menu para navegação
 typedef enum {NOVOJOGO, RECORDES, SAIR} menuOptions;
 
 //Função que exibe a seleção do item do menu imprimindo-o com uma cor de destaque
 void highlightMenuOption(int *opcaoAtual);
 
-//Função que verifica e retorna a opção do usuário no menu principal
 int navigateMenu()
 {
     //Declaração de variáveis

@@ -15,9 +15,10 @@ HEADERS += \
     navigation.h \
     persistence.h \
     records.h \
-    constants.h
+    constants.h \
+    records_struct.h
 
 DISTFILES += \
-    records.txt \
     game_screen.txt \
-    records_screen.txt
+    records_screen.txt \
+    records.bin
