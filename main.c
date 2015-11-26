@@ -2,7 +2,6 @@
 
 #include <Windows.h>
 #include <stdlib.h>
-#include <locale.h>
 
 #include "constants.h"
 #include "display.h"

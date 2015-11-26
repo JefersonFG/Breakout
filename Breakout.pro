@@ -19,6 +19,4 @@ HEADERS += \
     records_struct.h
 
 DISTFILES += \
-    game_screen.txt \
-    records_screen.txt \
     records.bin

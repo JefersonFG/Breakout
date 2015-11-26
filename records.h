@@ -34,8 +34,8 @@ void read_new_record(int pontos)
 
      if (pontos > (records[MAXRECORDS - 1]).pontos)
      {
-         printf("Insira seu nome: ")
-         fflush (stdin)
+         printf("Insira seu nome: ");
+         fflush (stdin);
          fgets((records[MAXRECORDS - 1]).nome, 15, stdin); // Para não dar erro na leitura no nome do jogador.
          (records[MAXRECORDS - 1]).pontos = pontos; // Coloca o ponto do jogador no campo correto
          organizarecordes(records); //Organiza os records com sua respectiva ordem depois da alteração
