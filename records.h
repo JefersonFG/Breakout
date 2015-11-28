@@ -1,12 +1,18 @@
 //Arquivo que organiza e manipula os recordes conseguidos no jogo
 
+//Diretivas de compilação para impedir que o arquivo seja declarado duas vezes
+#ifndef RECORDS_H
+#define RECORDS_H
+
 #include <stdio.h>
+#include <string.h>
+
 #include "constants.h"
 #include "records_struct.h"
 #include "persistence.h"
 
 //Função que inicializa as estruturas de um array
-void initStructs(struct recorde recordes[]);
+void initStructs(struct recorde records[]);
 
 //TODO - Documentar função
 void read_new_record(struct recorde comparar);
@@ -14,15 +20,15 @@ void read_new_record(struct recorde comparar);
 //TODO - Documentar função
 void printRecords();
 
-void initStructs(struct recorde recordes[])
+void initStructs(struct recorde records[])
 {
     //Declaração de variáveis
     int i = 0;
 
     //Inicializa as MAXRECORDES estruturas com nome " " e pontuação 0
     for (i = 0; i < MAXRECORDS; i++) {
-        recordes[i].nome = " ";
-        recordes[i].pontos = 0;
+        strcpy(records[i].nome, " ");
+        records[i].pontos = 0;
     }
 }
 
@@ -82,3 +88,5 @@ void organizarecordes (struct recorde recordes[])
     }
 
 }
+
+#endif //RECORDS_H

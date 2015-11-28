@@ -16,7 +16,9 @@ HEADERS += \
     persistence.h \
     records.h \
     constants.h \
-    records_struct.h
+    records_struct.h \
+    engine.h
 
 DISTFILES += \
-    records.bin
+    records.bin \
+    game_level_1.txt

@@ -1,5 +1,9 @@
 //Arquivo com as funções que exibem informações na tela, como o fundo do jogo e dos menus
 
+//Diretivas de compilação para impedir que o arquivo seja declarado duas vezes
+#ifndef DISPLAY_H
+#define DISPLAY_H
+
 #include <stdio.h>
 #include "conio21/conio2.h"
 
@@ -17,6 +21,9 @@ void showGameScreen();
 
 //Função que exibe a tela de recordes do jogo
 void showRecordsScreen();
+
+//Função que finaliza o programa
+void showClosingScreen();
 
 void hideCursor()
 {
@@ -851,9 +858,6 @@ void showGameScreen()
     printf("%c", CINFESQ);
     for (i = i + 2; i < 79; i++) { printf("%c", MHOR); }
     printf("%c", CINFDIR);
-
-    //Aguarda um caracter para sair da tela
-    getch();
 }
 
 void showRecordsScreen()
@@ -869,3 +873,20 @@ void showRecordsScreen()
     //Aguarda um caracter para sair da tela
     getch();
 }
+
+void showClosingScreen()
+{
+    //Limpa a tela
+    clrscr();
+
+    //Posiciona o cursor no centro da tela
+    gotoxy(28,19);
+
+    //Exibe a mensagem de fim de programa
+    printf("Finalizando o programa...");
+
+    //Posiciona o cursor no centro da tela novamente
+    gotoxy(21,20);
+}
+
+#endif //DISPLAY_H

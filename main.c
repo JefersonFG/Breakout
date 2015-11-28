@@ -6,6 +6,7 @@
 #include "constants.h"
 #include "display.h"
 #include "navigation.h"
+#include "engine.h"
 
 int main(void)
 {
@@ -13,7 +14,7 @@ int main(void)
     int opcaoMenu = 0;
 
     //Seta o tamanho de tela para 40x80
-    //A linha extra é temporária enquanto o cursor permanece na última linha
+    //Uma linha a mais é necessária pois após o último printf o cursor vai a linha 41
     system("mode 80, 41");
 
     //Esconde o cursor da tela
@@ -31,6 +32,7 @@ int main(void)
         switch (opcaoMenu) {
         case NOVOJOGO:
             showGameScreen();
+            startGame();
             break;
         case RECORDES:
             showRecordsScreen();
@@ -38,8 +40,8 @@ int main(void)
         }
     } while (opcaoMenu != SAIR);
 
-    //Envia o cursor para a última linha da janela
-    gotoxy(1,41);
+    //Chama a função que exibe a tela de saída
+    showClosingScreen();
 
     //Finaliza o programa
     return 0;

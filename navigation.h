@@ -1,7 +1,10 @@
 //Arquivo com funções que permitem ao usuário navegar através das telas do jogo
 
+//Diretivas de compilação para impedir que o arquivo seja declarado duas vezes
+#ifndef NAVIGATION_H
+#define NAVIGATION_H
+
 #include <stdio.h>
-#include <conio.h>
 #include "conio21/conio2.h"
 
 //Função que verifica e retorna a opção do usuário no menu principal
@@ -102,3 +105,5 @@ void highlightMenuOption(int *opcaoAtual)
     textbackground(BLACK);
     textcolor(LIGHTGRAY);
 }
+
+#endif //NAVIGATION_H
