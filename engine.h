@@ -62,6 +62,9 @@ bool testHitBlock(ballCoordinates ballNextPos, blockCoordinates blockPositions[M
 void redirectBall(ballDirections *ballDirection, ballCoordinates ballNextPos, ballCoordinates ballPos,
                   blockCoordinates blockPositions[MAXBLOCKS]);
 
+//Função que verifica se ainda há blocos na tela
+bool blocksOnScreen(blockCoordinates blockPositions[MAXBLOCKS]);
+
 int startGame()
 {
     //Declaração de variáveis
@@ -94,19 +97,19 @@ int startGame()
     initGameElements(&ballDirection, &basePos, &ballPos, base, ball);
 
     //Inicia o loop principal do jogo
-    while (lives > 0) {
+    do {
+        //Exibe e atualiza a pontuação do jogador na tela
+        showScore(score);
+
+        //Exibe e atualiza as vidas do jogador na tela
+        showLives(lives);
+
         //Divide o delay entre cada movimento da bolinha em vários segmentos
         //Para poder testar a entrada do teclado entre cada um
         for (i = 0; i < DELAYPARTS; i++) {
             testMoveBase(&basePos);
             delay(DELAYTIME / DELAYPARTS);
         }
-
-        //Exibe e atualiza a pontuação do jogador na tela
-        showScore(score);
-
-        //Exibe e atualiza as vidas do jogador na tela
-        showLives(lives);
 
         //Verifica o sentido de movimento da bolinha e atualiza o ballNextPos
         switch (ballDirection) {
@@ -184,7 +187,12 @@ int startGame()
             gotoxy(ballPos.posX, ballPos.posY);
             printf("%c", ball);
         }
-    }
+
+        //Verifica se ainda há blocos na tela, se não houver finaliza o loop
+        if (!blocksOnScreen(blockPositions)) {
+            lives = 0;
+        }
+    } while (lives > 0);
 
     //Retorna a pontuação do usuário
     return score;
@@ -534,6 +542,29 @@ void redirectBall(ballDirections *ballDirection, ballCoordinates ballNextPos,
             *ballDirection = DUPRIGHT;
         }
     }
+}
+
+bool blocksOnScreen(blockCoordinates blockPositions[MAXBLOCKS])
+{
+    //Declaração de variáveis
+    bool match = false;
+    int i = 0;
+
+    //Verifica se existe algum bloco cuja posição seja diferente de (0,0)
+    for (i = 0; i < MAXBLOCKS; i++) {
+        if ((blockPositions[i].posX != 0) ||
+                (blockPositions[i].posY != 0))
+        {
+            //Encontrou um bloco com posição diferente de (0,0)
+            match = true;
+
+            //Finaliza o loop
+            i = MAXBLOCKS;
+        }
+    }
+
+    //Retorna se ainda há blocos
+    return match;
 }
 
 #endif //ENGINE_H

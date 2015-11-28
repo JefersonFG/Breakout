@@ -16,15 +16,15 @@
 void initStructs(recordes records[]);
 
 //TODO - Documentar função
-void read_new_record(int pontos);
+void readNewRecord(int pontos);
 
 //TODO - Documentar função
 void printRecords();
 
 //TODO - Documentar função
-void organizarecordes (recordes recorde[]);
+void arrangeRecords(recordes recorde[]);
 
-void initStructs (recordes records[])
+void initStructs(recordes records[])
 {
     //Declaração de variáveis
     int i = 0;
@@ -36,7 +36,7 @@ void initStructs (recordes records[])
     }
 }
 
-void read_new_record(int pontos)
+void readNewRecord(int pontos)
 {
     recordes records[MAXRECORDS];
     int flag = 0;
@@ -57,7 +57,7 @@ void read_new_record(int pontos)
         fflush (stdin);
         fgets((records[MAXRECORDS - 1]).nome, 25, stdin); // Para não dar erro na leitura no nome do jogador.
         records[MAXRECORDS - 1].pontos = pontos; // Coloca o ponto do jogador no campo correto
-        organizarecordes(records); //Organiza os records com sua respectiva ordem depois da alteração
+        arrangeRecords(records); //Organiza os records com sua respectiva ordem depois da alteração
         writeRecordsToFile(records); // Escreve no arquivo
     }
 }
@@ -84,7 +84,7 @@ void printRecords() //Função para printar os records na tela definida pra isso
 }
 
 
-void organizarecordes (recordes recorde[]) //Buble sort para organizar os recordes na ordem certa
+void arrangeRecords (recordes recorde[]) //Buble sort para organizar os recordes na ordem certa
 {
     recordes aux;
     int cont1;

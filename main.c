@@ -36,13 +36,24 @@ int main(void)
         //Entra na tela correspondente à opção
         switch (opcaoMenu) {
         case NOVOJOGO:
+            //Exibe a tela de jogo
             showGameScreen();
+
+            //Inicia o jogo e obtém a pontuação do jogador ao final do jogo
             playerScore = startGame();
-            //TODO - Salvar os recordes
-            read_new_record(playerScore);
+
+            //Verifica se a pontuação é um recorde, e se for o salva
+            readNewRecord(playerScore);
             break;
         case RECORDES:
+            //Exibe a tela de recordes
             showRecordsScreen();
+
+            //Exibe os recordes alcançados pelos jogadores
+            printRecords();
+
+            //Aguarda um caracter para sair da tela de recordes
+            getch();
             break;
         }
     } while (opcaoMenu != SAIR);
