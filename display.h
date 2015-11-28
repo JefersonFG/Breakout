@@ -9,6 +9,7 @@
 
 #include "constants.h"
 #include "persistence.h"
+#include "records.h"
 
 //Função que apaga o cursor da tela
 void hideCursor();
@@ -1178,6 +1179,8 @@ void showRecordsScreen()
     printf("%c", CINFESQ);
     for (i = 1; i < 79; i++) { printf("%c", MHOR); }
     printf("%c", CINFDIR);
+
+    printRecords();// Imprime os recordes propriamente dito no centro da tela
 
     //Aguarda um caracter para sair da tela
     getch();

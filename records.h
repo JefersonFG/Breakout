@@ -6,6 +6,7 @@
 
 #include <stdio.h>
 #include <string.h>
+#include "conio21/conio2.h"
 
 #include "constants.h"
 #include "records_struct.h"
@@ -15,10 +16,13 @@
 void initStructs(recordes records[]);
 
 //TODO - Documentar função
-void read_new_record(recordes comparar);
+void read_new_record(int pontos);
 
 //TODO - Documentar função
 void printRecords();
+
+//TODO - Documentar função
+void organizarecordes (recordes recorde[]);
 
 void initStructs (recordes records[])
 {
@@ -34,19 +38,28 @@ void initStructs (recordes records[])
 
 void read_new_record(int pontos)
 {
-     recordes records[MAXRECORDS];
+    recordes records[MAXRECORDS];
+    int flag = 0;
 
-     readRecordsFromFile(records);
+    readRecordsFromFile(records);
 
-     if (pontos > (records[MAXRECORDS - 1]).pontos)
-     {
-         printf("Insira seu nome: ");
-         fflush (stdin);
-         fgets((records[MAXRECORDS - 1]).nome, 15, stdin); // Para não dar erro na leitura no nome do jogador.
-         (records[MAXRECORDS - 1]).pontos = pontos; // Coloca o ponto do jogador no campo correto
-         organizarecordes(records); //Organiza os records com sua respectiva ordem depois da alteração
-         writeRecordsToFile(records); // Escreve no arquivo
-     }
+    if (pontos > (records[MAXRECORDS - 1]).pontos) //Caso a pontuação do jogador for maior que a do ultimo jogador entra aqui
+    {
+        gotoxy(59, 18);
+        textbackground(LIGHTGRAY);
+        textcolor(BLACK);
+        printf("Novo Recorde!\n");
+        textbackground(BLACK);
+        textcolor(LIGHTGRAY);
+        gotoxy(53, 20);
+        printf("Insira seu nome:\n");
+        gotoxy(53, 21);
+        fflush (stdin);
+        fgets((records[MAXRECORDS - 1]).nome, 25, stdin); // Para não dar erro na leitura no nome do jogador.
+        records[MAXRECORDS - 1].pontos = pontos; // Coloca o ponto do jogador no campo correto
+        organizarecordes(records); //Organiza os records com sua respectiva ordem depois da alteração
+        writeRecordsToFile(records); // Escreve no arquivo
+    }
 }
 
 
@@ -54,19 +67,24 @@ void printRecords() //Função para printar os records na tela definida pra isso
 {
     recordes final[MAXRECORDS];
     int cont;
+    int pos = 0; //Para ir avançando as posições em que são imprimidos os recordes
 
-    readRecordsFromFile(final);
+    initStructs(final); // Os espaços que ainda não tem pontuação fica com espaço e pontos "0"
+    readRecordsFromFile(final);//Carregar os recordes realizados com suas respectivas posições
 
-    printf("RECORDES"); //Modificar fonte e colocar no meio da tela
     for (cont = 0; cont < MAXRECORDS; cont++)
     {
-        Printf("%s   %d", final[cont].nome, final[cont].pontos);
+        gotoxy(18, 12 + pos); // Posição em que é imprimido os recordes
+        printf("%02d |                              | %09d", cont + 1, final[cont].pontos);
+        gotoxy(22, 12 + pos);
+        printf("%28s", final[cont].nome );
+        pos = pos +3;
     }
 
 }
 
 
-void organizarecordes (recordes recorde[])
+void organizarecordes (recordes recorde[]) //Buble sort para organizar os recordes na ordem certa
 {
     recordes aux;
     int cont1;

@@ -2,12 +2,12 @@
 
 #include <Windows.h>
 #include <stdlib.h>
-#include <time.h>
 
 #include "constants.h"
 #include "display.h"
 #include "navigation.h"
 #include "engine.h"
+#include "records.h"
 
 int main(void)
 {
@@ -39,6 +39,7 @@ int main(void)
             showGameScreen();
             playerScore = startGame();
             //TODO - Salvar os recordes
+            read_new_record(playerScore);
             break;
         case RECORDES:
             showRecordsScreen();
