@@ -91,7 +91,7 @@ int startGame()
     showGameLevel(1, blockPositions);
 
     //Inicia a base e a bolinha
-    initGameElements(&ballDirection, &basePos, &ballPos, base, &ball);
+    initGameElements(&ballDirection, &basePos, &ballPos, base, ball);
 
     //Inicia o loop principal do jogo
     while (lives > 0) {
@@ -157,7 +157,7 @@ int startGame()
         } else if (ballNextPos.posY == (LEVEL_FILE_HEIGHT + 1)) {
             //Alcançou a borda de baixo, portanto deve perder uma vida e reiniciar
             cleanGameElements(&basePos, &ballPos);
-            initGameElements(&ballDirection, &basePos, &ballPos, base, &ball);
+            initGameElements(&ballDirection, &basePos, &ballPos, base, ball);
             lives--;
         } else if ((ballNextPos.posY == basePos.posY) && (ballNextPos.posX >= basePos.posX)
                    && (ballNextPos.posX < (basePos.posX + BASESIZE))) {
