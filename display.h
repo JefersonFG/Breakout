@@ -862,13 +862,320 @@ void showGameScreen()
 
 void showRecordsScreen()
 {
-    //TODO - Implementar tela de recordes
+    //Declaração de variáveis
+    int i = 0;
 
     //Inicia limpando a tela da aplicação
     clrscr();
 
-    //Temporário - Exibe uma mensagem informando o nome da tela
-    printf("Tela de recordes");
+    //Imprime a tela de fundo do jogo linha a linha
+
+    //Linha 1
+    printf("%c", CSUPESQ);
+    for (i = 1; i < 79; i++) { printf("%c", MHOR); }
+    printf("%c", CSUPDIR);
+
+    //Linha 2
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 3
+    printf("%c", MVERT);
+    for(i = 1; i < 17; i++) { printf("%c", ESPACO);}
+    for(i; i < 20; i++) {printf("%c", LETRAO);}
+    for(i; i < 23; i++) {printf("%c", ESPACO);}
+    for(i; i < 27; i++) {printf("%c", LETRAO);}
+    for(i; i < 30; i++) {printf("%c", ESPACO);}
+    for(i; i < 33; i++) {printf("%c", LETRAO);}
+    for(i; i < 36; i++) {printf("%c", ESPACO);}
+    for(i; i < 38; i++) {printf("%c", LETRAO);}
+    for(i; i < 42; i++) {printf("%c", ESPACO);}
+    for(i; i < 45; i++) {printf("%c", LETRAO);}
+    for(i; i < 48; i++) {printf("%c", ESPACO);}
+    for(i; i < 50; i++) {printf("%c", LETRAO);}
+    for(i; i < 54; i++) {printf("%c", ESPACO);}
+    for(i; i < 58; i++) {printf("%c", LETRAO);}
+    for(i; i < 60; i++) {printf("%c", ESPACO);}
+    for(i; i < 64; i++) {printf("%c", LETRAO);}
+    for(i; i < 79; i++) {printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 4
+    printf("%c", MVERT);
+    for(i = 1; i < 17; i++) { printf("%c", ESPACO);}
+    for(i; i < 18; i++) {printf("%c", LETRAO);}
+    for(i; i < 20; i++) { printf("%c", ESPACO);}
+    for(i; i < 21; i++) {printf("%c", LETRAO);}
+    for(i; i < 23; i++) {printf("%c", ESPACO);}
+    for(i; i < 24; i++) {printf("%c", LETRAO);}
+    for(i; i < 29; i++) {printf("%c", ESPACO);}
+    for(i; i < 30; i++) {printf("%c", LETRAO);}
+    for(i; i < 35; i++) {printf("%c", ESPACO);}
+    for(i; i < 36; i++) {printf("%c", LETRAO);}
+    for(i; i < 38; i++) {printf("%c", ESPACO);}
+    for(i; i < 39; i++) {printf("%c", LETRAO);}
+    for(i; i < 42; i++) {printf("%c", ESPACO);}
+    for(i; i < 43; i++) {printf("%c", LETRAO);}
+    for(i; i < 45; i++) {printf("%c", ESPACO);}
+    for(i; i < 46; i++) {printf("%c", LETRAO);}
+    for(i; i < 48; i++) {printf("%c", ESPACO);}
+    for(i; i < 49; i++) {printf("%c", LETRAO);}
+    for(i; i < 50; i++) {printf("%c", ESPACO);}
+    for(i; i < 51; i++) {printf("%c", LETRAO);}
+    for(i; i < 54; i++) {printf("%c", ESPACO);}
+    for(i; i < 55; i++) {printf("%c", LETRAO);}
+    for(i; i < 60; i++) {printf("%c", ESPACO);}
+    for(i; i < 61; i++) {printf("%c", LETRAO);}
+    for(i; i < 79; i++) {printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+
+    //Linha 5
+    printf("%c", MVERT);
+    for(i = 1; i < 17; i++) { printf("%c", ESPACO);}
+    for(i; i < 20; i++) {printf("%c", LETRAO);}
+    for(i; i < 23; i++) {printf("%c", ESPACO);}
+    for(i; i < 26; i++) {printf("%c", LETRAO);}
+    for(i; i < 29; i++) {printf("%c", ESPACO);}
+    for(i; i < 30; i++) {printf("%c", LETRAO);}
+    for(i; i < 35; i++) {printf("%c", ESPACO);}
+    for(i; i < 36; i++) {printf("%c", LETRAO);}
+    for(i; i < 38; i++) {printf("%c", ESPACO);}
+    for(i; i < 39; i++) {printf("%c", LETRAO);}
+    for(i; i < 42; i++) {printf("%c", ESPACO);}
+    for(i; i < 45; i++) {printf("%c", LETRAO);}
+    for(i; i < 48; i++) {printf("%c", ESPACO);}
+    for(i; i < 49; i++) {printf("%c", LETRAO);}
+    for(i; i < 51; i++) {printf("%c", ESPACO);}
+    for(i; i < 52; i++) {printf("%c", LETRAO);}
+    for(i; i < 54; i++) {printf("%c", ESPACO);}
+    for(i; i < 57; i++) {printf("%c", LETRAO);}
+    for(i; i < 60; i++) {printf("%c", ESPACO);}
+    for(i; i < 64; i++) {printf("%c", LETRAO);}
+    for(i; i < 79; i++) {printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+
+    //Linha 6
+    printf("%c", MVERT);
+    for(i = 1; i < 17; i++) { printf("%c", ESPACO);}
+    for(i; i < 18; i++) {printf("%c", LETRAO);}
+    for(i; i < 19; i++) { printf("%c", ESPACO);}
+    for(i; i < 20; i++) {printf("%c", LETRAO);}
+    for(i; i < 23; i++) {printf("%c", ESPACO);}
+    for(i; i < 24; i++) {printf("%c", LETRAO);}
+    for(i; i < 29; i++) {printf("%c", ESPACO);}
+    for(i; i < 30; i++) {printf("%c", LETRAO);}
+    for(i; i < 35; i++) {printf("%c", ESPACO);}
+    for(i; i < 36; i++) {printf("%c", LETRAO);}
+    for(i; i < 38; i++) {printf("%c", ESPACO);}
+    for(i; i < 39; i++) {printf("%c", LETRAO);}
+    for(i; i < 42; i++) {printf("%c", ESPACO);}
+    for(i; i < 43; i++) {printf("%c", LETRAO);}
+    for(i; i < 44; i++) {printf("%c", ESPACO);}
+    for(i; i < 45; i++) {printf("%c", LETRAO);}
+    for(i; i < 48; i++) {printf("%c", ESPACO);}
+    for(i; i < 49; i++) {printf("%c", LETRAO);}
+    for(i; i < 50; i++) {printf("%c", ESPACO);}
+    for(i; i < 51; i++) {printf("%c", LETRAO);}
+    for(i; i < 54; i++) {printf("%c", ESPACO);}
+    for(i; i < 55; i++) {printf("%c", LETRAO);}
+    for(i; i < 63; i++) {printf("%c", ESPACO);}
+    for(i; i < 64; i++) {printf("%c", LETRAO);}
+    for(i; i < 79; i++) {printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 7
+    printf("%c", MVERT);
+    for(i = 1; i < 17; i++) { printf("%c", ESPACO);}
+    for(i; i < 18; i++) {printf("%c", LETRAO);}
+    for(i; i < 20; i++) { printf("%c", ESPACO);}
+    for(i; i < 21; i++) {printf("%c", LETRAO);}
+    for(i; i < 23; i++) {printf("%c", ESPACO);}
+    for(i; i < 27; i++) {printf("%c", LETRAO);}
+    for(i; i < 30; i++) {printf("%c", ESPACO);}
+    for(i; i < 33; i++) {printf("%c", LETRAO);}
+    for(i; i < 36; i++) {printf("%c", ESPACO);}
+    for(i; i < 38; i++) {printf("%c", LETRAO);}
+    for(i; i < 42; i++) {printf("%c", ESPACO);}
+    for(i; i < 43; i++) {printf("%c", LETRAO);}
+    for(i; i < 45; i++) { printf("%c", ESPACO);}
+    for(i; i < 46; i++) {printf("%c", LETRAO);}
+    for(i; i < 48; i++) {printf("%c", ESPACO);}
+    for(i; i < 50; i++) {printf("%c", LETRAO);}
+    for(i; i < 54; i++) {printf("%c", ESPACO);}
+    for(i; i < 58; i++) {printf("%c", LETRAO);}
+    for(i; i < 60; i++) {printf("%c", ESPACO);}
+    for(i; i < 64; i++) {printf("%c", LETRAO);}
+    for(i; i < 79; i++) {printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 8
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 9
+    printf("%c", CINFESQ);
+    for (i = 1; i < 79; i++) { printf("%c", MHOR); }
+    printf("%c", CINFDIR);
+
+    //Linha 10
+    printf("%c", CSUPESQ);
+    for (i = 1; i < 79; i++) { printf("%c", MHOR); }
+    printf("%c", CSUPDIR);
+
+    //Linha 11
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 12
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 13
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 14
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 15
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 16
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 17
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 18
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 19
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 20
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 21
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+
+    //Linha 22
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 23
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 24
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 25
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 26
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 27
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 28
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 29
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 30
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 31
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 32
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 33
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 34
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 35
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 36
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 37
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 38
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 39
+    printf("%c", MVERT);
+    for(i = 1; i < 79; i++) { printf("%c", ESPACO);}
+    printf("%c", MVERT);
+
+    //Linha 40
+    printf("%c", CINFESQ);
+    for (i = 1; i < 79; i++) { printf("%c", MHOR); }
+    printf("%c", CINFDIR);
 
     //Aguarda um caracter para sair da tela
     getch();
