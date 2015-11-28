@@ -7,8 +7,7 @@
 #define RECORDS_STRUCT_H
 
 //Estrutura de dados contendo os recordes do jogo
-typedef struct recorde
-{
+typedef struct {
     char nome[15+1];    // Nome do usuário com no máximo 15 carcteres. '+1' destinado ao '\0'
     int pontos;         // Pontos feitos no jogo.
 } recordes;

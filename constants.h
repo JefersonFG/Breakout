@@ -11,6 +11,22 @@
 //Número máximo de recordes a ser exibido/armazenado
 #define MAXRECORDS 10
 
+//Tamanho da base do jogo
+#define BASESIZE 9
+
+//Número de vidas no início do jogo
+#define LIVES 3
+
+//Pontuação de cada bloco
+#define BLOCK_POINTS 10
+
+//Número máximo de blocos do programa
+#define MAXBLOCKS 300
+
+//Tempo entre cada movimento da bolinha (em ms) e em quantos intervalos será dividido
+#define DELAYTIME 150
+#define DELAYPARTS 10
+
 //Tamanho dos arquivos de nível de jogo
 #define LEVEL_FILE_HEIGHT 39
 #define LEVEL_FILE_WIDTH 49
@@ -26,10 +42,12 @@
 #define CINFDIR  217   //'┘'
 #define MVERT    179   //'│'
 #define MHOR     196   //'─'
-#define ESPACO   255   //' '
+#define ESPACO    32   //' '
 #define LETRAO   111   //'o'
 
 //Defines com os caracteres das telas de jogo do programa
-#define BLOCO     42   //'*'
+#define BLOCK     42   //'*'
+#define BASE      45   //'-'
+#define BALL     111   //'o'
 
 #endif //CONSTANTS_H

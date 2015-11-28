@@ -12,15 +12,15 @@
 #include "persistence.h"
 
 //Função que inicializa as estruturas de um array
-void initStructs(struct recorde records[]);
+void initStructs(recordes records[]);
 
 //TODO - Documentar função
-void read_new_record(struct recorde comparar);
+void read_new_record(recordes comparar);
 
 //TODO - Documentar função
 void printRecords();
 
-void initStructs(struct recorde records[])
+void initStructs (recordes records[])
 {
     //Declaração de variáveis
     int i = 0;
@@ -34,7 +34,7 @@ void initStructs(struct recorde records[])
 
 void read_new_record(int pontos)
 {
-     struct recorde records[MAXRECORDS];
+     recordes records[MAXRECORDS];
 
      readRecordsFromFile(records);
 
@@ -52,7 +52,7 @@ void read_new_record(int pontos)
 
 void printRecords() //Função para printar os records na tela definida pra isso
 {
-    struct recorde final[MAXRECORDS];
+    recordes final[MAXRECORDS];
     int cont;
 
     readRecordsFromFile(final);
@@ -66,9 +66,9 @@ void printRecords() //Função para printar os records na tela definida pra isso
 }
 
 
-void organizarecordes (struct recorde recordes[])
+void organizarecordes (recordes recorde[])
 {
-    struct recorde aux;
+    recordes aux;
     int cont1;
     int cont2;
     int k = MAXRECORDS - 1;
@@ -77,11 +77,11 @@ void organizarecordes (struct recorde recordes[])
     {
         for(cont2 = 0; cont2 < k; cont2++)
         {
-            if(recordes[cont2].pontos < recordes[cont2+1].pontos)
+            if(recorde[cont2].pontos < recorde[cont2+1].pontos)
             {
-                aux = recordes[cont2];
-                recordes[cont2] = recordes[cont2+1];
-                recordes[cont2+1] = aux;
+                aux = recorde[cont2];
+                recorde[cont2] = recorde[cont2+1];
+                recorde[cont2+1] = aux;
             }
         }
         k--;

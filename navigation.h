@@ -7,11 +7,11 @@
 #include <stdio.h>
 #include "conio21/conio2.h"
 
-//Função que verifica e retorna a opção do usuário no menu principal
-int navigateMenu();
-
 //Tipo enumerado com as opções do menu para navegação
 typedef enum {NOVOJOGO, RECORDES, SAIR} menuOptions;
+
+//Função que verifica e retorna a opção do usuário no menu principal
+int navigateMenu();
 
 //Função que exibe a seleção do item do menu imprimindo-o com uma cor de destaque
 void highlightMenuOption(int *opcaoAtual);
@@ -20,7 +20,7 @@ int navigateMenu()
 {
     //Declaração de variáveis
     int opcaoMenu = 0;
-    char confirm = ' ';
+    char keyPress = ' ';
 
     //Indica que o cursor está na primeira posição
     opcaoMenu = NOVOJOGO;
@@ -30,19 +30,19 @@ int navigateMenu()
 
     //Entra em um loop para permitir a navegação entre os menus
     //O loop termina quando o usuário digitar o valor enter
-    while (confirm != '\r' && confirm != '\n') {
+    while (keyPress != '\r' && keyPress != '\n') {
         //Verifica o caracter digitado e age de acordo
-        confirm = getch();
+        keyPress = getch();
 
         //Quando pressionadas, as teclas de navegação colocam os seguintes valores no buffer:
         //-32 e 72 (cima) ou 80 (baixo) ou 77 (direita) ou 75 (esquerda)
         //O código abaixo verifica o primeiro caracter e testa o segundo
         //Isto é feito para evitar que outras teclas ativem a navegação
-        if (confirm == -32) {
+        if (keyPress == -32) {
 
-            confirm = getch();
+            keyPress = getch();
 
-            switch(confirm) {
+            switch(keyPress) {
             case 72:
                 //Tecla para cima
                 //Somente troca a opção do menu caso não esteja na mais acima

@@ -2,6 +2,7 @@
 
 #include <Windows.h>
 #include <stdlib.h>
+#include <time.h>
 
 #include "constants.h"
 #include "display.h"
@@ -12,6 +13,7 @@ int main(void)
 {
     //Declaração de variáveis
     int opcaoMenu = 0;
+    int playerScore = 0;
 
     //Seta o tamanho de tela para 40x80
     //Uma linha a mais é necessária pois após o último printf o cursor vai a linha 41
@@ -19,6 +21,9 @@ int main(void)
 
     //Esconde o cursor da tela
     hideCursor();
+
+    //Inicializa o gerador de números aleatórios que será usado no jogo
+    srand(time(NULL));
 
     //Permite ao usuário navegar no menu e permanece no loop enquanto o usuário não escolher sair do jogo
     do {
@@ -32,7 +37,8 @@ int main(void)
         switch (opcaoMenu) {
         case NOVOJOGO:
             showGameScreen();
-            startGame();
+            playerScore = startGame();
+            //TODO - Salvar os recordes
             break;
         case RECORDES:
             showRecordsScreen();

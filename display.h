@@ -618,7 +618,9 @@ void showGameScreen()
     for (i = 1; i < 49; i++) { printf("%c", ESPACO); }
     printf("%c", MVERT);
     printf("%c", MVERT);
-    for (i = i + 2; i < 79; i++) { printf("%c", ESPACO); }
+    for (i = i + 2; i < 53; i++) { printf("%c", ESPACO); }
+    printf("SCORE:");
+    for (i = i + 6; i < 79; i++) { printf("%c", ESPACO); }
     printf("%c", MVERT);
 
     //Linha 12

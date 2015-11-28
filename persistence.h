@@ -14,10 +14,10 @@
 void readGameLevelFile(int level, char gameLevel[][LEVEL_FILE_WIDTH]);
 
 //Função que lê os recordes do jogo do arquivo de recordes
-void readRecordsFromFile(struct recorde records[]);
+void readRecordsFromFile(recordes records[]);
 
 //Função que salva os novos recordes do jogo no arquivo de recordes
-void writeRecordsToFile(struct recorde records[]);
+void writeRecordsToFile(recordes records[]);
 
 void readGameLevelFile(int level, char gameLevel[][LEVEL_FILE_WIDTH])
 {
@@ -59,7 +59,7 @@ void readGameLevelFile(int level, char gameLevel[][LEVEL_FILE_WIDTH])
     }
 }
 
-void readRecordsFromFile(struct recorde records[])
+void readRecordsFromFile(recordes records[])
 {
     //Declaração de variáveis
     FILE *recordsFile;
@@ -74,7 +74,7 @@ void readRecordsFromFile(struct recorde records[])
     } else {
         //Lê um máximo de MAXRECORDES de estruturas de recordes, e salva em recordes
         while ((i < MAXRECORDS) && (!feof(recordsFile))) {
-            fread(&records[i], sizeof(struct recorde), 1, recordsFile);
+            fread(&records[i], sizeof(recordes), 1, recordsFile);
             i++;
         }
 
@@ -83,7 +83,7 @@ void readRecordsFromFile(struct recorde records[])
     }
 }
 
-void writeRecordsToFile(struct recorde records[])
+void writeRecordsToFile(recordes records[])
 {
     //Declaração de variáveis
     FILE *recordsFile;
@@ -98,7 +98,7 @@ void writeRecordsToFile(struct recorde records[])
     } else {
         //Salva os recordes no arquivo
         for (i = 0; i < MAXRECORDS; i++) {
-            fwrite(&records[i], sizeof(struct recorde), 1, recordsFile);
+            fwrite(&records[i], sizeof(recordes), 1, recordsFile);
         }
 
         //Fecha o arquivo após a leitura
