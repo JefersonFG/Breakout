@@ -75,9 +75,9 @@ void printRecords() //Função para printar os records na tela definida pra isso
     for (cont = 0; cont < MAXRECORDS; cont++)
     {
         gotoxy(18, 12 + pos); // Posição em que é imprimido os recordes
-        printf("%02d |                              | %09d", cont + 1, final[cont].pontos);
-        gotoxy(22, 12 + pos);
-        printf("%28s", final[cont].nome );
+        printf("%02d |                              | %d", cont + 1, final[cont].pontos);
+        gotoxy(24, 12 + pos);
+        printf("%s", final[cont].nome );
         pos = pos +3;
     }
 
