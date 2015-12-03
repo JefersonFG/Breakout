@@ -1,3 +1,5 @@
+//Autores: Jéferson Ferreira Guimarães e Eduardo Henrique Ferreira do Nascimento
+
 //Arquivo principal de código do projeto Breakout
 
 #include <Windows.h>
