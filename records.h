@@ -15,13 +15,13 @@
 //Função que inicializa as estruturas de um array
 void initStructs(recordes records[]);
 
-//TODO - Documentar função
+//Função que lê uma nova pontuação para verificar se é um recorde e a salva se for
 void readNewRecord(int pontos);
 
-//TODO - Documentar função
+//Função para printar os recordes na tela definida pra isso
 void printRecords();
 
-//TODO - Documentar função
+//Função que organize o vetor de recordes
 void arrangeRecords(recordes recorde[]);
 
 void initStructs(recordes records[])
@@ -63,7 +63,7 @@ void readNewRecord(int pontos)
 }
 
 
-void printRecords() //Função para printar os records na tela definida pra isso
+void printRecords()
 {
     recordes final[MAXRECORDS];
     int cont;
@@ -75,22 +75,23 @@ void printRecords() //Função para printar os records na tela definida pra isso
     for (cont = 0; cont < MAXRECORDS; cont++)
     {
         gotoxy(18, 12 + pos); // Posição em que é imprimido os recordes
-        printf("%02d |                              | %d", cont + 1, final[cont].pontos);
+        printf("%2d |                              | %4d", cont + 1, final[cont].pontos);
         gotoxy(24, 12 + pos);
         printf("%s", final[cont].nome );
-        pos = pos +3;
+        pos = pos + 3;
     }
 
 }
 
 
-void arrangeRecords (recordes recorde[]) //Buble sort para organizar os recordes na ordem certa
+void arrangeRecords (recordes recorde[])
 {
     recordes aux;
     int cont1;
     int cont2;
     int k = MAXRECORDS - 1;
 
+    //Buble sort para organizar os recordes na ordem certa
     for (cont1 = 0; cont1 < MAXRECORDS; cont1++)
     {
         for(cont2 = 0; cont2 < k; cont2++)
